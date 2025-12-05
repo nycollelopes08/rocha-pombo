@@ -1,193 +1,376 @@
-/* ====================== FONTE GERAL ======================= */
+:root {
+  --cor-primaria: #0046a8;
+  --cor-secundaria: #ffcc00;
+  --cor-texto: #222;
+  --font-sans: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: #f4f4f4;
-    color: #222;
+  font-family: var(--font-sans);
+  color: var(--cor-texto);
+  background: #f9f9f9;
+  line-height: 1.6;
 }
 
-/* ====================== MENU FIXO ======================= */
+/* ========== Container central ========== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ========== HEADER / NAV ========== */
 .header {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    background: #0046a8;
-    padding: 12px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    box-shadow: 0 0 10px #0004;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--cor-primaria);
+  color: white;
+  z-index: 1000;
+  padding: 10px 0;
 }
-
-.header .logo {
-    font-size: 1.8em;
-    color: #ffcc00;
-    font-weight: 700;
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--cor-secundaria);
+}
 .menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
-
 .menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
 }
-
 .menu a:hover {
-    color: #ffcc00;
+  color: var(--cor-secundaria);
 }
 
-/* ====================== HERO ======================= */
+/* ========== HERO ========== */
 .hero {
-    height: 100vh;
-    background: linear-gradient(#0007, #0007),
-        url("rocha-pombo.jpg") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding-top: 70px;
+  height: 100vh;
+  background: url('images/hero.jpg') center/cover no-repeat fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 70px;
+  color: white;
 }
-
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
 .hero h1 {
-    font-size: 3.8em;
-    margin-bottom: 10px;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
 }
-
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
 .btn-primary {
-    background: #ffcc00;
-    padding: 12px 25px;
-    border-radius: 8px;
-    color: #000;
-    text-decoration: none;
-    font-weight: 700;
-    transition: 0.3s;
+  background: var(--cor-secundaria);
+  color: var(--cor-primaria);
+  transition: background 0.3s;
 }
-
 .btn-primary:hover {
-    background: #ffe066;
+  background: #ffe066;
+}
+.btn-secondary {
+  background: var(--cor-primaria);
+  color: white;
+  transition: background 0.3s;
+}
+.btn-secondary:hover {
+  background: #00336a;
 }
 
-/* ====================== SOBRE ======================= */
+/* ========== SECTION – SOBRE ========== */
 .sobre {
-    padding: 80px 10%;
-    background: #fff;
+  padding: 100px 0;
+  background: white;
 }
-
 .sobre h2 {
-    text-align: center;
-    font-size: 2.5em;
-    color: #0046a8;
+  text-align: center;
+  font-size: 2.8rem;
+  color: var(--cor-primaria);
+  margin-bottom: 40px;
+}
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.sobre-img img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.sobre-text h3 {
+  color: var(--cor-primaria);
+  margin: 20px 0 10px;
+}
+.sobre-text p {
+  margin-bottom: 15px;
+  text-align: justify;
 }
 
-.cards-container {
-    margin-top: 40px;
-    display: flex;
-    gap: 25px;
-    justify-content: center;
+/* ========== SECTION – CURSOS ========== */
+.cursos {
+  padding: 80px 0;
+  background: #f0f0f0;
+}
+.cursos h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  color: var(--cor-primaria);
+  margin-bottom: 50px;
+}
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.curso-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.curso-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.curso-card:hover {
+  transform: translateY(-8px);
+}
+.curso-card h3 {
+  margin: 15px;
+  color: var(--cor-primaria);
+}
+.curso-card p {
+  margin: 0 15px 20px;
+  font-size: 0.95rem;
+  color: #555;
 }
 
-.card {
-    width: 30%;
-    background: #0046a8;
-    color: white;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    transition: transform .3s;
+/* ========== SECTION – DOCENTES ========== */
+.docentes {
+  padding: 80px 0;
+  background: white;
+}
+.docentes h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  color: var(--cor-primaria);
+  margin-bottom: 50px;
+}
+.docentes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+}
+.docente-card {
+  text-align: center;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.docente-card img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  height: 180px;
+}
+.docente-card h4 {
+  margin: 15px 0 5px;
+  color: var(--cor-primaria);
+}
+.docente-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+.docente-card:hover {
+  transform: scale(1.05);
 }
 
-.card i {
-    font-size: 50px;
-    margin-bottom: 10px;
-    color: #ffcc00;
+/* ========== SECTION – CALENDÁRIO ========== */
+.calendario {
+  padding: 80px 0;
+  background: #f0f0f0;
+}
+.calendario h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  color: var(--cor-primaria);
+  margin-bottom: 40px;
+}
+.calendario table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.calendario th, .calendario td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.calendario th {
+  background: var(--cor-primaria);
+  color: white;
 }
 
-.card:hover {
-    transform: scale(1.05);
+/* ========== SECTION – NOTÍCIAS ========== */
+.noticias {
+  padding: 80px 0;
+  background: white;
+}
+.noticias h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  color: var(--cor-primaria);
+  margin-bottom: 40px;
+}
+.noticia-card {
+  background: #f9f9f9;
+  margin: 20px 0;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+.noticia-card h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 15px;
+}
+.noticia-card p {
+  margin-bottom: 15px;
+}
+.noticia-card .btn-secondary {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+.noticia-card:hover {
+  transform: translateY(-5px);
 }
 
-/* ====================== ATIVIDADES ======================= */
-.atividades {
-    background: #ffcc00;
-    padding: 70px 8%;
-    color: #000;
-}
-
-.atividades-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    margin-top: 35px;
-}
-
-.atividade {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px #0003;
-    transition: transform .3s;
-}
-
-.atividade img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.atividade:hover {
-    transform: translateY(-10px);
-}
-
-/* ====================== GALERIA ======================= */
+/* ========== SECTION – GALERIA ========== */
 .galeria {
-    padding: 70px 10%;
-    background: #0046a8;
-    color: white;
-    text-align: center;
+  padding: 80px 0;
+  background: #f0f0f0;
 }
-
+.galeria h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  color: var(--cor-primaria);
+  margin-bottom: 50px;
+}
 .galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
-
 .galeria-grid img {
-    width: 100%;
-    border-radius: 8px;
-    transition: .3s;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .galeria-grid img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 15px #fff8;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* ====================== CONTATO ======================= */
+/* ========== SECTION – CONTATO ========== */
 .contato {
-    padding: 60px 8%;
-    background: #fff;
-    text-align: center;
+  padding: 80px 0;
+  background: white;
 }
-
+.contato h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  color: var(--cor-primaria);
+  margin-bottom: 40px;
+}
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
 .contato-info p {
-    font-size: 1.3em;
-    margin: 10px 0;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.contato-form button {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  border: none;
 }
 
-/* ====================== FOOTER ======================= */
+/* ========== FOOTER ========== */
 .footer {
-    text-align: center;
-    background: #002f6c;
-    color: white;
-    padding: 20px;
+  background: var(--cor-primaria);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 992px) {
+  .sobre-grid, .contato-grid {
+    grid-template-columns: 1fr;
+  }
+  .menu {
+    display: none;
+  }
+  /* Para um menu responsivo, você pode implementar um "hamburger" com JS */
 }

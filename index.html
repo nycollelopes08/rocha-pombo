@@ -1,123 +1,184 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colégio Estadual Rocha Pombo</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colégio Estadual Rocha Pombo</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Fontes e ícones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-<!-- NAVBAR FIXA -->
-<header class="header">
-    <div class="logo">Rocha Pombo</div>
-    <nav>
+  <!-- MENU FIXO -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">Rocha Pombo</div>
+      <nav>
         <ul class="menu">
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#atividades">Atividades</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#contato">Contato</a></li>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#docentes">Corpo Docente</a></li>
+          <li><a href="#calendario">Calendário</a></li>
+          <li><a href="#noticias">Notícias</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
-    </nav>
-</header>
-
-<!-- HERO BANNER -->
-<section id="inicio" class="hero">
-    <div class="hero-content">
-        <h1>Colégio Estadual Rocha Pombo</h1>
-        <p>Educação, inovação e compromisso com o futuro.</p>
-        <a href="#sobre" class="btn-primary">Conheça o Colégio</a>
+      </nav>
     </div>
-</section>
+  </header>
 
-<!-- SOBRE -->
-<section id="sobre" class="sobre">
-    <h2>Sobre o Colégio</h2>
-    <p>
-        Localizado em Capanema-PR, o Colégio Estadual Rocha Pombo destaca-se pela excelência 
-        no ensino, participação em olimpíadas, projetos culturais e esportivos.
-    </p>
-
-    <div class="cards-container">
-        <div class="card">
-            <i class="fa-solid fa-book"></i>
-            <h3>Qualidade de Ensino</h3>
-            <p>Aulas dinâmicas, professores capacitados e inovação tecnológica.</p>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-people-group"></i>
-            <h3>Projetos e Clubes</h3>
-            <p>Feira de Ciências, Grêmio Estudantil, Dança, Artes e mais.</p>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-medal"></i>
-            <h3>Resultados</h3>
-            <p>Participação em competições acadêmicas e esportivas.</p>
-        </div>
+  <!-- HERO BANNER -->
+  <section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>Bem-vindo ao Colégio Estadual Rocha Pombo</h1>
+      <p>Excelência no ensino, formação de cidadãos conscientes e preparação para o futuro.</p>
+      <a href="#sobre" class="btn btn-primary">Saiba mais</a>
     </div>
-</section>
+  </section>
 
-<!-- ATIVIDADES -->
-<section id="atividades" class="atividades">
-    <h2>Atividades da Escola</h2>
-
-    <div class="atividades-grid">
-        <div class="atividade">
-            <img src="atividade1.jpg" alt="">
-            <h3>Feira de Ciências</h3>
-        </div>
-
-        <div class="atividade">
-            <img src="atividade2.jpg" alt="">
-            <h3>Projetos de Arte</h3>
-        </div>
-
-        <div class="atividade">
-            <img src="atividade3.jpg" alt="">
-            <h3>Esportes e Torneios</h3>
-        </div>
-
-        <div class="atividade">
-            <img src="atividade4.jpg" alt="">
-            <h3>Cultura e Eventos</h3>
-        </div>
+  <!-- SOBRE / HISTÓRIA / MISSÃO & VISÃO -->
+  <section id="sobre" class="sobre container">
+    <h2>Quem Somos</h2>
+    <div class="sobre-grid">
+      <div class="sobre-text">
+        <h3>História</h3>
+        <p>Fundado em [ano], o Colégio Estadual Rocha Pombo surgiu com o compromisso de levar educação pública de qualidade à comunidade de Capanema-PR e região. Ao longo dos anos, crescemos em estrutura, equipe e reconhecimento, sempre valorizando o desenvolvimento integral de nossos estudantes.</p>
+        <h3>Missão</h3>
+        <p>Oferecer educação pública de excelência, promovendo o desenvolvimento intelectual, social e cultural dos alunos, preparando-os para os desafios do futuro.</p>
+        <h3>Visão</h3>
+        <p>Ser referência regional em educação, inovação pedagógica e formação cidadã.</p>
+      </div>
+      <div class="sobre-img">
+        <img src="images/historia.jpg" alt="Foto da escola">
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- GALERIA -->
-<section id="galeria" class="galeria">
-    <h2>Galeria de Fotos</h2>
+  <!-- CURSOS / NÍVEIS DE ENSINO -->
+  <section id="cursos" class="cursos container">
+    <h2>Nossos Cursos</h2>
+    <div class="cursos-grid">
+      <div class="curso-card">
+        <img src="images/curso1.jpg" alt="Ensino Fundamental e Médio">
+        <h3>Ensino Fundamental</h3>
+        <p>Anos iniciais e finais, com reforço pedagógico e projetos multidisciplinares.</p>
+      </div>
+      <div class="curso-card">
+        <img src="images/curso2.jpg" alt="Ensino Médio">
+        <h3>Ensino Médio</h3>
+        <p>Foco acadêmico, preparatório para vestibulares e ENEM, com atividades complementares.</p>
+      </div>
+      <div class="curso-card">
+        <img src="images/curso3.jpg" alt="Educação Integral / Projetos">
+        <h3>Educação Integral</h3>
+        <p>Oficinas culturais, esportivas, reforço pedagógico e apoio psicopedagógico.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- CORPO DOCENTE / EQUIPE -->
+  <section id="docentes" class="docentes container">
+    <h2>Nossa Equipe</h2>
+    <div class="docentes-grid">
+      <div class="docente-card">
+        <img src="images/docente1.jpg" alt="Prof. Nome">
+        <h4>Prof. (a) Maria Silva</h4>
+        <p>Coordenadora Pedagógica</p>
+      </div>
+      <div class="docente-card">
+        <img src="images/docente2.jpg" alt="Prof. Nome">
+        <h4>Prof. (a) João Souza</h4>
+        <p>Professor de Matemática</p>
+      </div>
+      <div class="docente-card">
+        <img src="images/docente3.jpg" alt="Prof. Nome">
+        <h4>Prof. (a) Ana Pereira</h4>
+        <p>Professora de Ciências</p>
+      </div>
+      <!-- … repita conforme o número de professores -->
+    </div>
+  </section>
+
+  <!-- CALENDÁRIO ESCOLAR (exemplo de uma tabela) -->
+  <section id="calendario" class="calendario container">
+    <h2>Calendário Escolar 2025</h2>
+    <table>
+      <thead>
+        <tr><th>Mês</th><th>Evento</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fevereiro</td><td>Início das aulas</td></tr>
+        <tr><td>Abril</td><td>Feira de Ciências</td></tr>
+        <tr><td>Junho</td><td>Semana Cultural</td></tr>
+        <tr><td>Agosto</td><td>Reunião de Pais</td></tr>
+        <tr><td>Outubro</td><td>Jogos Interclasse</td></tr>
+        <tr><td>Dezembro</td><td>Formatura / Encerramento</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- NOTÍCIAS / BLOG -->
+  <section id="noticias" class="noticias container">
+    <h2>Notícias & Comunicados</h2>
+
+    <article class="noticia-card">
+      <h3>Feira de Ciências 2025 — Destaques</h3>
+      <p>Na última sexta-feira, nossa escola realizou a Feira de Ciências com mais de 20 projetos desenvolvidos por alunos do ensino fundamental e médio. Foi um sucesso de público e engajamento.</p>
+      <a href="#" class="btn btn-secondary">Leia mais</a>
+    </article>
+
+    <article class="noticia-card">
+      <h3>Entrega de certificados – Olimpíada de Matemática</h3>
+      <p>Alunos premiados em olimpíadas estaduais receberam certificados e homenagens em cerimônia no auditório da escola.</p>
+      <a href="#" class="btn btn-secondary">Leia mais</a>
+    </article>
+
+    <!-- … mais posts -->
+  </section>
+
+  <!-- GALERIA DE FOTOS -->
+  <section id="galeria" class="galeria container">
+    <h2>Galeria</h2>
     <div class="galeria-grid">
-        <img src="foto1.jpg" alt="">
-        <img src="foto2.jpg" alt="">
-        <img src="foto3.jpg" alt="">
-        <img src="foto4.jpg" alt="">
-        <img src="foto5.jpg" alt="">
-        <img src="foto6.jpg" alt="">
+      <img src="images/galeria1.jpg" alt="Evento">
+      <img src="images/galeria2.jpg" alt="Evento">
+      <img src="images/galeria3.jpg" alt="Evento">
+      <img src="images/galeria4.jpg" alt="Evento">
+      <img src="images/galeria5.jpg" alt="Evento">
+      <img src="images/galeria6.jpg" alt="Evento">
     </div>
-</section>
+  </section>
 
-<!-- CONTATO -->
-<section id="contato" class="contato">
-    <h2>Contato</h2>
-
-    <div class="contato-info">
-        <p><i class="fa-solid fa-location-dot"></i> Capanema – Paraná</p>
-        <p><i class="fa-solid fa-envelope"></i> rochapombo@escola.pr.gov.br</p>
-        <p><i class="fa-solid fa-phone"></i> (46) XXXX-XXXX</p>
+  <!-- CONTATO + FORMULÁRIO -->
+  <section id="contato" class="contato container">
+    <h2>Fale Conosco</h2>
+    <div class="contato-grid">
+      <div class="contato-info">
+        <p><i class="fa-solid fa-location-dot"></i> Capanema – Paraná, Brasil</p>
+        <p><i class="fa-solid fa-envelope"></i> secretaria@rochapombo.pr.gov.br</p>
+        <p><i class="fa-solid fa-phone"></i> (46) 9XXXX-XXXX</p>
+      </div>
+      <form class="contato-form" action="#" method="post">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
     </div>
-</section>
+  </section>
 
-<footer class="footer">
-    <p>&copy; 2025 – Colégio Estadual Rocha Pombo | Todos os direitos reservados</p>
-</footer>
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Colégio Estadual Rocha Pombo. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

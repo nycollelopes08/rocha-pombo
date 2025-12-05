@@ -1,26 +1,34 @@
-// Rolagem suave do menu
+// Rolagem suave para âncoras
 document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href"))
-            .scrollIntoView({ behavior: "smooth" });
-    });
+  link.addEventListener('click', function(e){
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 });
 
-// Animação simples ao aparecer
-const items = document.querySelectorAll(".card, .atividade, .galeria-grid img");
+// Efeito de fade-in ou slide quando elementos entram na tela (usando IntersectionObserver)
+const observerOptions = {
+  threshold: 0.15
+};
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-}, { threshold: 0.2 });
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('reveal-visible');
+      obs.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
 
-items.forEach(el => {
-    el.style.opacity = 0;
-    el.style.transform = "translateY(40px)";
-    observer.observe(el);
+// Seleciona as seções ou cards que devem revelar com animação
+const revealElements = document.querySelectorAll(
+  '.sobre-img, .curso-card, .docente-card, .noticia-card, .galeria-grid img'
+);
+
+revealElements.forEach(el => {
+  el.classList.add('reveal-hidden');
+  observer.observe(el);
 });
