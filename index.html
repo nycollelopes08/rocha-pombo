@@ -5,65 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colégio Estadual Rocha Pombo</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header class="header">
-        <div class="logo">
-            <h1>Colégio Estadual Rocha Pombo</h1>
+
+<!-- NAVBAR FIXA -->
+<header class="header">
+    <div class="logo">Rocha Pombo</div>
+    <nav>
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#atividades">Atividades</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO BANNER -->
+<section id="inicio" class="hero">
+    <div class="hero-content">
+        <h1>Colégio Estadual Rocha Pombo</h1>
+        <p>Educação, inovação e compromisso com o futuro.</p>
+        <a href="#sobre" class="btn-primary">Conheça o Colégio</a>
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="sobre">
+    <h2>Sobre o Colégio</h2>
+    <p>
+        Localizado em Capanema-PR, o Colégio Estadual Rocha Pombo destaca-se pela excelência 
+        no ensino, participação em olimpíadas, projetos culturais e esportivos.
+    </p>
+
+    <div class="cards-container">
+        <div class="card">
+            <i class="fa-solid fa-book"></i>
+            <h3>Qualidade de Ensino</h3>
+            <p>Aulas dinâmicas, professores capacitados e inovação tecnológica.</p>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#atividades">Atividades</a></li>
-                <li><a href="#noticias">Notícias</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Seção Sobre -->
-    <section id="sobre" class="section-about">
-        <h2>Sobre o Colégio</h2>
-        <p>O Colégio Estadual Rocha Pombo, localizado em Capanema, Paraná, é um centro de excelência no ensino público, com o compromisso de formar cidadãos críticos e preparados para os desafios do futuro.</p>
-    </section>
-
-    <!-- Seção de Atividades -->
-    <section id="atividades" class="section-activities">
-        <h2>Atividades Realizadas</h2>
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="atividade1.jpg" alt="Atividade 1">
-                <p>Atividade de esportes</p>
-            </div>
-            <div class="gallery-item">
-                <img src="atividade2.jpg" alt="Atividade 2">
-                <p>Projeto de arte e cultura</p>
-            </div>
-            <div class="gallery-item">
-                <img src="atividade3.jpg" alt="Atividade 3">
-                <p>Feira de ciências</p>
-            </div>
+        <div class="card">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Projetos e Clubes</h3>
+            <p>Feira de Ciências, Grêmio Estudantil, Dança, Artes e mais.</p>
         </div>
-    </section>
 
-    <!-- Seção Notícias -->
-    <section id="noticias" class="section-news">
-        <h2>Últimas Notícias</h2>
-        <p>Fique por dentro dos eventos e comunicados importantes do Colégio Estadual Rocha Pombo.</p>
-    </section>
+        <div class="card">
+            <i class="fa-solid fa-medal"></i>
+            <h3>Resultados</h3>
+            <p>Participação em competições acadêmicas e esportivas.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Seção Contato -->
-    <section id="contato" class="section-contact">
-        <h2>Contato</h2>
-        <p>Email: <a href="mailto:contato@rochapombo.pr">contato@rochapombo.pr</a></p>
-        <p>Telefone: (42) 1234-5678</p>
-    </section>
+<!-- ATIVIDADES -->
+<section id="atividades" class="atividades">
+    <h2>Atividades da Escola</h2>
 
-    <footer class="footer">
-        <p>&copy; 2025 Colégio Estadual Rocha Pombo | Todos os direitos reservados</p>
-    </footer>
+    <div class="atividades-grid">
+        <div class="atividade">
+            <img src="atividade1.jpg" alt="">
+            <h3>Feira de Ciências</h3>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="atividade">
+            <img src="atividade2.jpg" alt="">
+            <h3>Projetos de Arte</h3>
+        </div>
+
+        <div class="atividade">
+            <img src="atividade3.jpg" alt="">
+            <h3>Esportes e Torneios</h3>
+        </div>
+
+        <div class="atividade">
+            <img src="atividade4.jpg" alt="">
+            <h3>Cultura e Eventos</h3>
+        </div>
+    </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="galeria">
+    <h2>Galeria de Fotos</h2>
+
+    <div class="galeria-grid">
+        <img src="foto1.jpg" alt="">
+        <img src="foto2.jpg" alt="">
+        <img src="foto3.jpg" alt="">
+        <img src="foto4.jpg" alt="">
+        <img src="foto5.jpg" alt="">
+        <img src="foto6.jpg" alt="">
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="contato">
+    <h2>Contato</h2>
+
+    <div class="contato-info">
+        <p><i class="fa-solid fa-location-dot"></i> Capanema – Paraná</p>
+        <p><i class="fa-solid fa-envelope"></i> rochapombo@escola.pr.gov.br</p>
+        <p><i class="fa-solid fa-phone"></i> (46) XXXX-XXXX</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2025 – Colégio Estadual Rocha Pombo | Todos os direitos reservados</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

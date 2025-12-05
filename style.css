@@ -1,118 +1,193 @@
-/* Resetando estilos padrão */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* ====================== FONTE GERAL ======================= */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Cabeçalho */
-.header {
-    background-color: #003366; /* Azul forte */
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-.header .logo h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-family: "Poppins", sans-serif;
+    background: #f4f4f4;
+    color: #222;
 }
 
-.navbar ul {
-    list-style: none;
-    padding: 0;
+/* ====================== MENU FIXO ======================= */
+.header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    background: #0046a8;
+    padding: 12px 25px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 0 10px #0004;
+}
+
+.header .logo {
+    font-size: 1.8em;
+    color: #ffcc00;
+    font-weight: 700;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ffcc00;
+}
+
+/* ====================== HERO ======================= */
+.hero {
+    height: 100vh;
+    background: linear-gradient(#0007, #0007),
+        url("rocha-pombo.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 70px;
+}
+
+.hero h1 {
+    font-size: 3.8em;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background: #ffcc00;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #ffe066;
+}
+
+/* ====================== SOBRE ======================= */
+.sobre {
+    padding: 80px 10%;
+    background: #fff;
+}
+
+.sobre h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #0046a8;
+}
+
+.cards-container {
+    margin-top: 40px;
+    display: flex;
+    gap: 25px;
     justify-content: center;
 }
 
-.navbar ul li {
-    margin: 0 15px;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: color 0.3s;
-}
-
-.navbar ul li a:hover {
-    color: #ff4c4c; /* Vermelho vibrante */
-}
-
-/* Seções */
-section {
-    padding: 40px 0;
-    text-align: center;
-}
-
-.section-about {
-    background-color: #0099cc;
-    color: white;
-}
-
-.section-activities {
-    background-color: #ffcc00;
-    color: #003366;
-}
-
-.section-activities .gallery {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.gallery-item {
+.card {
     width: 30%;
-    padding: 10px;
+    background: #0046a8;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform .3s;
 }
 
-.gallery-item img {
+.card i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* ====================== ATIVIDADES ======================= */
+.atividades {
+    background: #ffcc00;
+    padding: 70px 8%;
+    color: #000;
+}
+
+.atividades-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.atividade {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px #0003;
+    transition: transform .3s;
+}
+
+.atividade img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 180px;
+    object-fit: cover;
 }
 
-.section-news, .section-contact {
-    background-color: #ffffff;
-    color: #333;
+.atividade:hover {
+    transform: translateY(-10px);
 }
 
-.section-news h2, .section-contact h2 {
-    color: #003366;
-}
-
-/* Rodapé */
-.footer {
-    background-color: #003366;
+/* ====================== GALERIA ======================= */
+.galeria {
+    padding: 70px 10%;
+    background: #0046a8;
     color: white;
     text-align: center;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #fff8;
+}
+
+/* ====================== CONTATO ======================= */
+.contato {
+    padding: 60px 8%;
+    background: #fff;
+    text-align: center;
+}
+
+.contato-info p {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+/* ====================== FOOTER ======================= */
+.footer {
+    text-align: center;
+    background: #002f6c;
+    color: white;
     padding: 20px;
-}
-
-.footer p {
-    font-size: 0.9em;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-    }
-
-    .gallery {
-        flex-direction: column;
-    }
-
-    .gallery-item {
-        width: 80%;
-        margin-bottom: 20px;
-    }
 }
